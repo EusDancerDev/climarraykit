@@ -1,0 +1,45 @@
+{% set name = "climarraykit" %}
+{% set version = "0.1.0" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  path: ..
+
+build:
+  noarch: python
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv"
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - setuptools >=68.0
+    - wheel
+  run:
+    - python >=3.10
+    - pip
+    - numpy >=1.21.0
+    - pandas >=1.3.0
+    - xarray >=2024.2.0
+    # filewise, pygenutils, paramlib: installed via post-link pip (see post-link.sh)
+
+test:
+  imports:
+    - climarraykit
+  commands:
+    - python -c "import climarraykit; print(climarraykit.__version__)"
+
+about:
+  home: https://github.com/EusDancerDev/climarraykit
+  license: MIT
+  license_file: LICENSE
+  summary: Climate-focused xarray toolkit for NetCDF and coordinate utilities
+  doc_url: https://github.com/EusDancerDev/climarraykit#readme
+  dev_url: https://github.com/EusDancerDev/climarraykit.git
+
+extra:
+  recipe-maintainers:
+    - EusDancerDev
