@@ -24,6 +24,43 @@ from pygenutils.arrays_and_lists.data_manipulation import flatten_list
 # Dimension handlers #
 #--------------------#
 
+def rename_xarray_dimension(
+    obj: xr.Dataset | xr.DataArray,
+    old_dim: str,
+    new_dim: str,
+) -> xr.Dataset | xr.DataArray:
+    """
+    Rename a dimension in an xarray :class:`~xarray.Dataset` or :class:`~xarray.DataArray`.
+
+    Tries ``rename_dims`` followed by ``rename`` on the same object, then falls back to
+    paired ``swap_dims`` calls when those steps fail (e.g. awkward coordinate setups).
+
+    Parameters
+    ----------
+    obj : xarray.Dataset | xarray.DataArray
+        Object whose dimension should be renamed.
+    old_dim : str
+        Current dimension name.
+    new_dim : str
+        Target dimension name.
+
+    Returns
+    -------
+    xarray.Dataset | xarray.DataArray
+        Object after renaming attempts (may be unchanged if all strategies fail).
+    """
+    try:
+        obj = obj.rename_dims({old_dim: new_dim})
+        obj = obj.rename({old_dim: new_dim})
+    except Exception:
+        try:
+            obj = obj.swap_dims({old_dim: new_dim})
+            obj = obj.swap_dims({old_dim: new_dim})
+        except Exception:
+            pass
+    return obj
+
+
 # Main functions #
 #-#-#-#-#-#-#-#-#-
 
