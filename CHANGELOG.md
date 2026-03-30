@@ -26,3 +26,6 @@ All notable changes to this project will be documented in this file.
 
 - Provide a non-breaking migration path by preserving the legacy logic and API shape while
   enabling import migration towards `climarraykit`.
+
+- Add `rename_xarray_dimension` to `climarraykit.patterns` for robust xarray dimension
+  renaming (shared by downstream packages such as `statflow` climatology helpers).
