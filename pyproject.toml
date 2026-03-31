@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "climarraykit"
-version = "0.1.0"
+version = "0.2.0"
 license = {file = "LICENSE"}
 description = "Climate-focused xarray toolkit for NetCDF/GRIB handling, coordinate discovery, and dataset serialisation"
 keywords = ["xarray", "climate", "netcdf", "grib", "meteorology", "climatology"]

@@ -18,3 +18,7 @@ where those dependencies are not always needed.
 This initial release preserves behaviour by exposing the same module-level APIs as the
 legacy `filewise.xarray_utils` package while enabling downstream projects to migrate imports
 to `climarraykit`.
+
+---
+
+Current version: **0.2.0** (see [CHANGELOG.md](CHANGELOG.md)).
