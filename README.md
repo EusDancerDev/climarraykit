@@ -21,4 +21,4 @@ to `climarraykit`.
 
 ---
 
-Current version: **0.2.0** (see [CHANGELOG.md](CHANGELOG.md)).
+Current version: **0.2.0** (see CHANGELOG.md).
