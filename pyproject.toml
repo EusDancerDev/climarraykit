@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "climarraykit"
-version = "0.2.0"
+version = "0.2.1"
 license = {file = "LICENSE"}
 description = "Climate-focused xarray toolkit for NetCDF/GRIB handling, coordinate discovery, and dataset serialisation"
 keywords = ["xarray", "climate", "netcdf", "grib", "meteorology", "climatology"]
@@ -28,9 +28,9 @@ dependencies = [
     "numpy>=2.2.3",
     "pandas>=2.2.3",
     "xarray>=2024.2.0",
-    "filewise>=3.13.0",
-    "pygenutils>=16.4.0",
-    "paramlib>=3.4.10",
+    "filewise>=3.14.0",
+    "pygenutils>=17.1.0",
+    "paramlib>=3.5.0",
 ]
 
 [project.optional-dependencies]
