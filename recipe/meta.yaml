@@ -36,7 +36,11 @@ about:
   home: https://github.com/EusDancerDev/climarraykit
   license: MIT
   license_file: LICENSE
-  summary: Climate-focused xarray toolkit for NetCDF and coordinate utilities
+  summary: Climate-oriented xarray helpers for NetCDF, GRIB, coordinates, and dataset serialisation
+  description: |
+    climarraykit extends xarray with utilities tuned to climate grids: coordinate discovery, lazy-friendly
+    NetCDF and GRIB handling, and serialisation patterns reused by climalab and related stacks. It keeps
+    heavy optional backends configurable at install time.
   doc_url: https://github.com/EusDancerDev/climarraykit#readme
   dev_url: https://github.com/EusDancerDev/climarraykit.git
 
