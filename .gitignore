@@ -58,13 +58,23 @@ logs/
 # Jupyter Notebook
 .ipynb_checkpoints
 
-# Data files
-*.csv
-*.json
+# Local data and generated datasets
+local_data/
+data_downloads/
+outputs/
+artifacts/
 *.parquet
 *.feather
 *.h5
 *.hdf5
 *.db
 *.sqlite
-*.sqlite3 
+*.sqlite3
+
+# Keep shareable examples and fixtures trackable.
+!examples/**
+!tests/**
+!docs/**
+!notebooks/**
+!sample_data/**
+!fixtures/**
